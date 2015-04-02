@@ -9,20 +9,25 @@
 	        <div class="two"></div>
 	        <div class="three"></div>
 	    </div>
-
-	    <div id="menu">
-	        <ul>
-	            <li>
-	            	<a href=""><span><i class="fa fa-twitter"></i></span> Twitter</a> 
-	            </li>
-	            <li>
-	            	<a href=""><span><i class="fa fa-github"></i></span> Github</a>
-	            </li>
-	            <li>
-	            	<a href="{{@blog.url}}/rss/"><span><i class="fa fa-rss"></i></span> RSS</a>
-	            </li>                
-	        </ul>
-	    </div> 
+            <div id="menu">
+                <ul>
+                    <li>
+                        <a href="http://nanagu.ru/" class="fa fa-home"></a>
+		    </li>
+                    <li>
+		 	<a href="https://www.facebook.com/pages/Nana-Guru/1557563147853830" class="fa fa-facebook"></a>	
+		    </li>
+                    <li>
+                        <a href="https://twitter.com/TheNanaGuru"><span><i class="fa fa-twitter"></i></span></a>
+                    </li>
+                    <li>
+                        <a href="{{@blog.url}}/rss/"><span><i class="fa fa-rss"></i></span></a>
+                    </li>
+  		    <li>
+			<a href="http://nanagu.ru/about/"> About</a>
+                    </li>
+                </ul>
+            </div>
 	 </div>
 </nav>
 
@@ -36,6 +41,12 @@
 		</a>
 		<p>{{@blog.description}}</p>
 	</div>
+<link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
 </header>
 
 <section class="posts">
@@ -44,13 +55,12 @@
 			<div class="inner">
 				<header class="header-post">
 					<span class="meta-post">
-						<time datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMM DD YYYY"}}</time>
-					</span>
+						<time datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMM DD YYYY"}}</time>					</span>
 					<h2 class="title-post">{{{title}}}</h2>
 				</header>
 				
 				<section class="content-post">
-					{{content}}
+					{{content}}{{tags}}
 				</section>
 
 				<footer class="footer-post">
@@ -89,7 +99,10 @@
 							<span class="hidden">Google+</span>
 						</a>
 					</section>
+
+
 				</footer>
+
 
 				<section class="comments-post">
 					<!-- Disqus Comments -->
@@ -97,6 +110,43 @@
 				</section>
 
 				{{/post}}
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'nanaguru';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+<!-- Begin MailChimp Signup Form -->
+<div id="mc_embed_signup">
+<form action="//nanagu.us10.list-manage.com/subscribe/post?u=0872dde0c660ed5526fa8f614&amp;id=dc44f41c63" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<h2>Receive Nana Guru updates delivered straight to your inbox. You will not be spammed and you can unsubscribe at any time.</h2>
+<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+<div class="mc-field-group">
+	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+</label>
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;"><input type="text" name="b_0872dde0c660ed5526fa8f614_dc44f41c63" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<!--End mc_embed_signup-->
 			</div>
 		</article>
 	</section>

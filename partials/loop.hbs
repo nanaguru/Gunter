@@ -4,7 +4,7 @@
 		<div class="inner">
 			<header class="header-post">
 				<span class="meta-post">
-					<time datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMM DD YYYY"}}</time>
+					<time datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMM DD YYYY"}}</time>{{tags prefix=" on "}}
 				</span>
 				<h2 class="title-post">
 					<a href="{{url}}">{{{title}}}</a>
@@ -19,7 +19,7 @@
 
 			<section class="post-excerpt">
 				<p>{{excerpt}}&hellip;</p>
-				<p>
+                                <p>
 					<a href="{{url}}" class="more">Continue reading <i class="fa fa-angle-right"></i></a>
 				</p>
 			</section>
