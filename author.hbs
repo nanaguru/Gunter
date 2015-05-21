@@ -8,21 +8,28 @@
 	        <div class="one"></div>
 	        <div class="two"></div>
 	        <div class="three"></div>
-	    </div>
+            </div>
+
             <div id="menu">
                 <ul>
                     <li>
-                        <a href="http://nanagu.ru"><span><i class="fa "></i></span> Home</a>
+                        <a href="http://nanagu.ru/" class="fa fa-home"></a>
+		    </li>
+                    <li>
+		 	<a href="https://www.facebook.com/pages/Nana-Guru/1557563147853830" class="fa fa-facebook"></a>	
+		    </li>
+                    <li>
+                        <a href="https://twitter.com/TheNanaGuru"><span><i class="fa fa-twitter"></i></span></a>
                     </li>
                     <li>
-                        <a href="{{@blog.url}}/rss/"><span><i class="fa fa-rss"></i></span> RSS</a>
+                        <a href="{{@blog.url}}/rss/"><span><i class="fa fa-rss"></i></span></a>
                     </li>
-                    <li>
-                        <a href="https://twitter.com/TheNanaGuru"><span><i class="fa fa-twitter"></i></span> Twitter</a>
+  		    <li>
+			<a href="http://nanagu.ru/about/"> About</a>
                     </li>
                 </ul>
             </div>
-	 </div>
+       </div>
 </nav>
 
 <header class="main-header {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">

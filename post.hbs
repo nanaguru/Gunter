@@ -58,6 +58,15 @@
 						<time datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMM DD YYYY"}}</time>					</span>
 					<h2 class="title-post">{{{title}}}</h2>
 				</header>
+					{{#author}}
+					<section class="author-post">
+						<div class="bio">
+						<h5 class="author-name">
+							{{name}}
+						</h5>
+						</div>
+					</section>
+					{{/author}}
 				
 				<section class="content-post">
 					{{content}}{{tags}}
